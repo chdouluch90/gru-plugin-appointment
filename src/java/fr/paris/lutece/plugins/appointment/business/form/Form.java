@@ -145,6 +145,11 @@ public final class Form implements RBACResource, AdminWorkgroupResource, Seriali
     private int _nCapacityPerSlot = 1;
 
     /**
+     * Anonymization pattern %f %g %n
+     */
+    private String _strAnonymizationPattern;
+
+    /**
      * Get the form Id
      * 
      * @return the form Id
@@ -506,6 +511,14 @@ public final class Form implements RBACResource, AdminWorkgroupResource, Seriali
     public void setCapacityPerSlot( int nCapacityPerSlot )
     {
         _nCapacityPerSlot = nCapacityPerSlot;
+    }
+
+    public String getAnonymizationPattern() {
+        return _strAnonymizationPattern;
+    }
+
+    public void setAnonymizationPattern(String strAnonymizationPattern) {
+        this._strAnonymizationPattern = strAnonymizationPattern;
     }
 
 }

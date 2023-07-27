@@ -273,6 +273,11 @@ public final class AppointmentFormDTO extends ReservationRule implements RBACRes
     private int _nCapacityPerSlot = 1;
 
     /**
+     * Anonymization Pattern
+     */
+    private String _strAnonymizationPattern;
+
+    /**
      * Get the maximum number of appointments authorized for a same user
      * 
      * @return the maximum number
@@ -1137,5 +1142,14 @@ public final class AppointmentFormDTO extends ReservationRule implements RBACRes
     {
         _nCapacityPerSlot = nCapacityPerSlot;
     }
+
+    public String getAnonymizationPattern() {
+        return _strAnonymizationPattern;
+    }
+
+    public void setAnonymizationPattern(String strAnonymizationPattern) {
+        _strAnonymizationPattern = strAnonymizationPattern;
+    }
+
 
 }

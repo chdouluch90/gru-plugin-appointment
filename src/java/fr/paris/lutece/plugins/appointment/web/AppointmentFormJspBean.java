@@ -287,6 +287,7 @@ public class AppointmentFormJspBean extends AbstractAppointmentFormAndSlotJspBea
             return redirectView( request, VIEW_CREATE_APPOINTMENTFORM );
         }
         _appointmentFormDTO.setIcon( buildImageResource( (MultipartHttpServletRequest) request ) );
+        _appointmentFormDTO.setAnonymizationPattern(request.getParameterValues("anonymize_pattern").toString());
         int nIdForm = FormService.createAppointmentForm( _appointmentFormDTO );
         AppLogService.info( LogUtilities.buildLog( ACTION_CREATE_APPOINTMENTFORM, Integer.toString( nIdForm ), getUser( ) ) );
         addInfo( INFO_APPOINTMENTFORM_CREATED, getLocale( ) );

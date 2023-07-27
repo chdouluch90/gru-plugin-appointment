@@ -2,6 +2,7 @@ ALTER TABLE appointment_form_rule  ADD bo_overbooking BOOLEAN NOT NULL DEFAULT F
 ALTER TABLE appointment_appointment DROP COLUMN id_slot;
 ALTER TABLE appointment_appointment ADD  COLUMN id_action_reported INT;
 ALTER TABLE appointment_form ADD COLUMN is_multislot_appointment BOOLEAN NOT NULL DEFAULT FALSE;
+ALTER TABLE appointment_form ADD COLUMN anonymization_pattern VARCHAR(3) DEFAULT NULL;
 -- -----------------------------------------------------
 -- Table appointment_appointment_slot
 -- -----------------------------------------------------
